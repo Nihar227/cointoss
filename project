@@ -1,1 +1,33 @@
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int userGuess, coinToss;
+    int heads = 0, tails = 1;
+    srand(time(NULL));
+
+    printf("Welcome to the Coin Toss Game!\n");
+    printf("I will toss a coin, and you guess whether it will be heads (0) or tails (1).\n");
+
+    do {
+        printf("Make your guess (0 for heads, 1 for tails): ");
+        scanf("%d", &userGuess);
+
+        coinToss = rand() % 2; // Simulate a coin toss (0 for heads, 1 for tails)
+
+        if (userGuess != 0 && userGuess != 1) {
+            printf("Invalid guess. Please enter 0 for heads or 1 for tails.\n");
+        } else if (userGuess == coinToss) {
+            printf("You guessed it right! It's %s.\n", userGuess == 0 ? "Heads" : "Tails");
+        } else {
+            printf("Sorry, it's %s. Try again!\n", coinToss == 0 ? "Heads" : "Tails");
+        }
+    } while (userGuess != coinToss);
+
+    return 0;
+}
+```
+
+In this game, you guess whether a coin toss will result in "Heads" (0) or "Tails" (1). The program simulates the coin toss, and you try to make the correct guess.
