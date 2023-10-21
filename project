@@ -28,6 +28,4 @@ int main() {
 
     return 0;
 }
-```
 
-In this game, you guess whether a coin toss will result in "Heads" (0) or "Tails" (1). The program simulates the coin toss, and you try to make the correct guess.
